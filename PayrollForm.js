@@ -5,8 +5,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const name = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
-    name.addEventListener('input', function() {
-        if(name.value.length == 0) {
+    name.addEventListener('input', function () {
+        if (name.value.length == 0) {
             textError.textContent = "";
             return;
         }
@@ -54,8 +54,8 @@ const createEmployeePayroll = () => {
     employeePayrollData.department = getSelectedValues('[name=department]');
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note = getInputValueById('#notes');
-    let date = getInputValueById('#day')+" " + getInputValueById('#month')+ " " +
-                getInputValueById('#year');
+    let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " +
+        getInputValueById('#year');
     employeePayrollData.startDate = new Date(Date.parse(date));
     alert(employeePayrollData.toString());
     return employeePayrollData;
@@ -88,4 +88,20 @@ const getInputValueById = (id) => {
 const getInputElementValue = (id) => {
     let value = document.getElementById(id).value;
     return value;
+}
+
+/* UC4:- Ability to save the Employee Payroll Object to Local Storage.
+    - Understand the difference between Local Storage, Session Storage and older feature of storing in cookies. 
+*/
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+
+    if (employeePayrollList != undefined) {
+        employeePayrollList.push(employeePayrollData);
+    }
+    else {
+        employeePayrollList = [employeePayrollData];
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
 }
