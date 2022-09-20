@@ -22,40 +22,36 @@
     <div class="form-content">
         <form class="form" action="#" onsubmit="save();return false">
 
-<!--Ability to create a Form Header and the Input Text Element for Name-->
+            <!--Ability to create a Form Header and the Input Text Element for Name-->
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
             </div>
-<!--Ability to specify the Profile Pic in the Form -->
+            <!--Ability to specify the Profile Pic in the Form -->
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
 
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" id="profile1" name="profile" value="Ellipse -3.png"
-                            required>
+                        <input type="radio" id="profile1" name="profile" value="Ellipse -3.png" required>
                         <img class="profile" id='imagel' src="Ellipse -3.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile2" name="profile" value="Ellipse -1.png"
-                            required>
+                        <input type="radio" id="profile2" name="profile" value="Ellipse -1.png" required>
                         <img class="profile" id='image2' src="Ellipse -1.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile3" name="profile" value="Ellipse -8.png"
-                            required>
+                        <input type="radio" id="profile3" name="profile" value="Ellipse -8.png" required>
                         <img class="profile" id='image3' src="Ellipse -8.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile4" name="profile" value="Ellipse -7.png"
-                            required>
+                        <input type="radio" id="profile4" name="profile" value="Ellipse -7.png" required>
                         <img class="profile" id='image4' src="Ellipse -7.png">
                     </label>
                 </div>
             </div>
-<!--Ability to specify the gender as radio button, department as checkbox and Salary as range indicator.-->
+            <!--Ability to specify the gender as radio button, department as checkbox and Salary as range indicator.-->
             <div class="row-content">
                 <label class="label text" for="gender">Gender</label>
                 <div>
@@ -82,11 +78,11 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="salary">Choose your salary: </label>
-                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" 
-                step="100" value="400000">
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                    value="400000">
                 <output class="salary—output text" for="salary">400000</output>
             </div>
-<!--Ability to specify the start date with Day, Month and Year as Select Input Item-->
+            <!--Ability to specify the start date with Day, Month and Year as Select Input Item-->
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
                 <div>
@@ -148,22 +144,22 @@
                     </select>
                 </div>
             </div>
-<!--Ability to add Notes as well as cancel, reset and submit button so as to do some action on form entry-->
-                <div class="row-content">
-                    <label class="label text" for="notes">Notes</label>
-                    <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+            <!--Ability to add Notes as well as cancel, reset and submit button so as to do some action on form entry-->
+            <div class="row-content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+            </div>
+            <div class="button-content">
+                <a href="EmployeePayrollApp.html" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
                 </div>
-                <div class="button-content">
-                    <a href="EmployeePayrollApp.html" class="resetButton button cancelButton">Cancel</a>
-                    <div class="submit-reset">
-                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-                        <button type="reset" class="resetButton button">Reset</button>
-                    </div>
-                </div>
+            </div>
         </form>
     </div>
-
-             <script src="EmployeePayroll.js"></script>
+    <script src="../js/EmployeePayroll.js"></script>
+    <script src="../js/PayrollForm.js"></script>
 </body>
 
 </html>
